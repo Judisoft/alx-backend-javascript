@@ -1,8 +1,7 @@
-export default function getListStudentIds(arrayOfObjects) {
-  const arrayOfIds = [];
-  for (let i = 0; i < arrayOfObjects.length; i++) {
-    arrayOfIds.push(arrayOfObjects[i].id);
+export default function getListStudentIds(students) {
+  // check arg is an array before using map
+  if (Array.isArray(students)) {
+    return students.map((items) => items.id);
   }
-
-  return arrayOfIds;
+  return [];
 }
